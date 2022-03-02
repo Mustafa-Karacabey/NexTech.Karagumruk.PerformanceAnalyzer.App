@@ -12,13 +12,14 @@ use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class ResultController extends Controller
+class DashboadController extends Controller
 {
 
     public function index(){
 
-        $data=Player::all();
-        return view('result.index', $data);
+        return view('home.index');
     }
+
+
 
 }

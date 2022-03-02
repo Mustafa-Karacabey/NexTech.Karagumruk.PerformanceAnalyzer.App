@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // --> /aboutus  goes about us in to main page  HomeController/aboutus aboutus
-Route::get('/result', [HomeController::class, 'result'])->name('result');
+Route::get('/result', [\App\Http\Controllers\ResultController::class, 'index'])->name('result');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
