@@ -101,7 +101,7 @@
 
         <x-slot name="content">
             <div>
-                {{ __('Please copy your new API token. For your security, it won\'t be shown again.') }}
+                {{ __('Lütfen yeni API simgenizi kopyalayın. Güvenliğiniz için bir daha gösterilmeyecektir.') }}
             </div>
 
             <x-jet-input x-ref="plaintextToken" type="text" readonly :value="$plainTextToken"
@@ -113,7 +113,7 @@
 
         <x-slot name="footer">
             <x-jet-secondary-button wire:click="$set('displayingToken', false)" wire:loading.attr="disabled">
-                {{ __('Close') }}
+                {{ __('Kapat') }}
             </x-jet-secondary-button>
         </x-slot>
     </x-jet-dialog-modal>
@@ -137,11 +137,11 @@
 
         <x-slot name="footer">
             <x-jet-secondary-button wire:click="$set('managingApiTokenPermissions', false)" wire:loading.attr="disabled">
-                {{ __('Cancel') }}
+                {{ __('İptal Et') }}
             </x-jet-secondary-button>
 
             <x-jet-button class="ml-3" wire:click="updateApiToken" wire:loading.attr="disabled">
-                {{ __('Save') }}
+                {{ __('Kaydet') }}
             </x-jet-button>
         </x-slot>
     </x-jet-dialog-modal>
@@ -149,20 +149,20 @@
     <!-- Delete Token Confirmation Modal -->
     <x-jet-confirmation-modal wire:model="confirmingApiTokenDeletion">
         <x-slot name="title">
-            {{ __('Delete API Token') }}
+            {{ __('API Simgesini Sil') }}
         </x-slot>
 
         <x-slot name="content">
-            {{ __('Are you sure you would like to delete this API token?') }}
+            {{ __('Bu API jetonunu silmek istediğinizden emin misiniz?') }}
         </x-slot>
 
         <x-slot name="footer">
             <x-jet-secondary-button wire:click="$toggle('confirmingApiTokenDeletion')" wire:loading.attr="disabled">
-                {{ __('Cancel') }}
+                {{ __('İptal Et') }}
             </x-jet-secondary-button>
 
             <x-jet-danger-button class="ml-3" wire:click="deleteApiToken" wire:loading.attr="disabled">
-                {{ __('Delete') }}
+                {{ __('Sil') }}
             </x-jet-danger-button>
         </x-slot>
     </x-jet-confirmation-modal>

@@ -17,7 +17,7 @@ Route::get('/testsonuclari',[\App\Http\Controllers\SearchController::class, 'ind
 
 Route::get('/search',[\App\Http\Controllers\SearchController::class, 'search'])->name('search');
 
-
+Route::get('/testgir',[\App\Http\Controllers\SearchController::class, 'index'])->name('testgir');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
