@@ -13,9 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// --> /aboutus  goes about us in to main page  HomeController/aboutus aboutus
-Route::get('/result', [\App\Http\Controllers\ResultController::class, 'index'])->name('result');
+Route::get('/testsonuclari',[\App\Http\Controllers\SearchController::class, 'index'])->name('test');
+
+Route::get('/search',[\App\Http\Controllers\SearchController::class, 'search'])->name('search');
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+    return view('dashboard');
+})->name('dashboard');
+
